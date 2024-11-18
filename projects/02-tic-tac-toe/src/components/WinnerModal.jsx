@@ -1,4 +1,3 @@
-
 import { Square } from "./Square"
 
 export function WinnerModal ({winner, resetGame}) {

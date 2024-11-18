@@ -3,7 +3,7 @@ import confetti from "canvas-confetti"
 
 import { Square } from "./components/Square.jsx"
 import {TURNS} from "./constanst.js"
-import { checkWinnerFrom } from "./boards.js"
+import { checkWinnerFrom, checkEndGame } from "./logic/boards.js"
 import { WinnerModal } from "./components/WinnerModal.jsx"
 
 function App() {

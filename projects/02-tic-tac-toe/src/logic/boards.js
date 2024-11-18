@@ -1,4 +1,4 @@
-import { WINNER_COMBOS } from "./constanst"
+import { WINNER_COMBOS } from "../constanst"
 
 export const checkWinnerFrom = (boardToCheck) => {
     // Revisamos cada una de las combinaciones posibles para ver si hay ganador
@@ -19,5 +19,5 @@ export const checkWinnerFrom = (boardToCheck) => {
 
 export const checkEndGame = (newBoard) => {
   //Revisamos si hay empate, si no hay mas nulls en el tablero
-      return newBoard.every((Square) => Square != null)
-    }
+  return newBoard.every((Square) => Square != null)
+}
