@@ -1,14 +1,29 @@
+:root {
+  --text-light: #E7E9EA;
+}
+
 body {
   margin: 0;
   background: #222;
-  font-family: system-ui;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: grid;
   place-content: center;
   min-height: 100vh;
+  color: var(--text-light);
 }
 
 .App {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 348px;
+  border: 1px solid #4b4b4b;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.tw-subtitle{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px;
 }
