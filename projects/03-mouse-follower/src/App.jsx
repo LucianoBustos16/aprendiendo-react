@@ -5,12 +5,9 @@ function App() {
   const [enabled, setEnabled] = useState(false)
   const [position, seTPosition] = useState({x: 0, y: 0})
 
-  useEffect(() => {
-    console.log('Se cambio el estado a ', {enabled})
-    
+  useEffect(() => {   
     const handleMove =  (event) => {
       const { clientY, clientX} = event
-      console.log('handleMove', { clientY, clientX} )
       seTPosition({x: clientX, y: clientY})
     }
 
@@ -26,7 +23,8 @@ function App() {
 
   return (
     <main>
-      <div
+      {
+        !enabled || <div
         style={{
           position: 'absolute',
           backgroundColor: '#09f',
@@ -37,9 +35,11 @@ function App() {
           top: -20,
           width: 40,
           height: 40,
-          transform: `translate(${position.x}px, ${position.y}px)`
+          transform: `translate(${position.x}px, ${position.y}px)`,
         }}
       ></div>
+      }
+      
     <button onClick={() => setEnabled(!enabled)}>{enabled ? 'Desactivar' : 'Activar'} seguir puntero</button>
     </main>
   )
